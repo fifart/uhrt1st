@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170621071033) do
+ActiveRecord::Schema.define(version: 20170621101600) do
 
   create_table "members", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20170621071033) do
     t.string   "name"
     t.string   "dg_name"
     t.string   "fb_page"
+    t.boolean  "admin"
   end
 
   add_index "members", ["email"], name: "index_members_on_email", unique: true
